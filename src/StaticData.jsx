@@ -38,15 +38,11 @@ const StaticData = {
     footer: [
         {
             name: "instagram",
-            link: "https://www.instagram.com/suryansh_1619?igsh=cjU4enVxaHM1eGpv"
+            link: "https://www.instagram.com/suryansh__829?igsh=cjU4enVxaHM1eGpv"
         },
         {
             name: "twitter",
             link: "https://x.com/Suryansh1619?t=26PJTqSl41n2kgZoO96sHg&s=08"
-        },
-        {
-            name: "snapchat",
-            link: "https://www.snapchat.com/add/suryansh_1919?share_id=2_Jm9zje2Uk&locale=en-GB"
         },
         {
             name: "telegram",

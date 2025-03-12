@@ -1,12 +1,11 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import { initialState,reducer } from '../reducer/Reducer';
-import StaticData from '../../StaticData';
+import StaticData from '../StaticData';
 
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-
+    const [state, dispatch] = useReducer(reducer, initialState);;
     useEffect(() => {
         const fetchData = async () => {
             try {
