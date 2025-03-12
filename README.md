@@ -1,8 +1,18 @@
-# React + Vite
+# Portfolio Website – React + Vite  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **fully responsive and customizable portfolio website** built with **React and Vite**, featuring dynamic content from a static JS file. It utilizes **React Reducer for state management** and **Material UI for modern UI components**.  
+🚀 **Live Demo:** [Portfolio](https://portfolio-main-smoky-alpha.vercel.app/)
 
-Currently, two official plugins are available:
+## 🌟 Features  
+- **Dynamic Content Management** – Fetches project data from a JSON file.  
+- **Fully Responsive** – Styled with **CSS** and **Material UI** for a sleek design.  
+- **State Management** – Uses **React Reducer** for handling UI state efficiently.  
+- **Smooth UI & Animations** – Optimized layout with **CSS transitions**.  
+- **Fast & Lightweight** – Powered by **Vite** for rapid development.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack  
+- **React + Vite** – For efficient development and fast HMR.  
+- **React Reducer** – For optimized state management.  
+- **CSS + Material UI** – For modern styling and UI components.  
+- **Static JSON Data** – For easy content management.  
+
