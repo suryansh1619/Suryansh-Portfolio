@@ -1,36 +1,34 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState} from 'react'
 import './footer.css';
-import { ThemeContext } from '../contexts/ThemeContext';
 import {DataContext} from '../contexts/DataContext'
 
 export default function Footer() {
     const {state}=useContext(DataContext);
     const footers=state.footer
-    const {darktheme}=useContext(ThemeContext);
-    console.log(footers[0].name)
+    const [hoveredId, setHoveredId] = useState(null);
+    
+    const handleMouseEnter = (id) => setHoveredId(id);
+    const handleMouseLeave = () => setHoveredId(null);
     return (
         <footer 
-            className='footer'
-            style={{backgroundColor: darktheme ?  "var(--title-color)" : "var(--container-color)",
-                borderTop: darktheme ?  "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(0,0,0,0.2)"
-            }}>
+            className='footer'>
             <div className="footer-container container">
                 <h1 className="footer-title">Suryansh</h1>
                 <div className="footer-social grid">
-                {footers.map((footer,index)=>{
-                    return(
-                        <a 
-                            key={index}
-                            href={footer.link}
-                            className='footer-social-icon' 
-                            style={{backgroundColor: !darktheme ?  "var(--title-color)" : "var(--container-color)",
-                                color: darktheme ?  "var(--title-color)" : "var(--container-color)"}}
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <i className={`bx bxl-${footer.name}`}></i>
-                        </a>
-                    )
-                })}
+                    {footers.map((footer,index)=>{
+                        return(
+                            <a 
+                                key={index}
+                                href={footer.link}
+                                className='footer-social-icon'
+                                onMouseEnter={() => handleMouseEnter(index)} 
+                                onMouseLeave={handleMouseLeave}
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                {footer.icon(index===hoveredId ? "var(--primary-color)": "var(--primary-text-color)")}
+                            </a>
+                        )
+                    })}
                 </div>
                 <span className="footer-copy">&#169; Copyright. All rights reserved</span>
             </div>

@@ -1,86 +1,86 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
+  --primary-color: #0475f0;
+  --primary-color: #3b59f0;
+  --primary-bg-color: #E8E8E8;
+  --blur-bg:rgba(255,255,255,0.25);
+  --primary-text-color: #000000;
+
   --header-height: 3rem;
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
-  --first-color:red;
+
   --body-font: "Poppins", sans-serif;
 
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.25rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.813rem;
-  --tiny-font-size: 0.625rem;
+  --big-font-size: 3rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.25rem;
+  --h5-font-size: 1rem;
+  --h6-font-size: .9rem;
 
-  --font-normal: 400;
   --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-semi: 700;
+  --font-bold: 900;
 
-  --mb-0-25: 0.25rem;
-  --mb-0-5: 0.5rem;
-  --mb-0-75: 0.75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
+  --space-0-25: 0.25rem;
+  --space-0-5: 0.5rem;
+  --space-0-75: 0.75rem;
+  --space-1: 1rem;
+  --space-1-5: 1.5rem;
+  --space-2: 2rem;
+  --space-2-5: 2.5rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 4rem;
+  --space-10: 10rem;
 
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 1rem;
+  --border-radius-large: 1.5rem;
+  --border-radius-circle: 50%;
+
+  --border: 2px solid rgba(0,0,0,0.25);
+  
+  --primary-shadow-small: 0 0 10px var(--primary-color);
+  --primary-shadow-medium: 0 0 20px var(--primary-color);
+  --primary-shadow-large: 0 0 30px var(--primary-color);
+
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 12px 25px rgba(0, 0, 0, 0.25);
+
+  --shadow-large-modal: 12px 12px 50px rgba(0, 0, 0, 1);
+
+  --blur-light: blur(5px);
+  --blur-medium: blur(10px);
+  --blur-heavy: blur(15px);
 }
 
-@media screen and (max-width: 992px) {
-  :root {
-    --big-font-size: 2.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-  }
+[data-theme="dark"]{
+  --primary-color: #1f41f4;
+  --primary-color: #54a7ff;
+  --primary-bg-color: #181818;
+  --blur-bg:rgba(0,0,0,0.25);
+  --primary-text-color: #FFFFFF;
+  
+  --shadow-small: 0 2px 4px rgba(255, 255, 255, 0.25);
+  --shadow-medium: 0 4px 8px rgba(255, 255, 255, 0.25);
+  --shadow-large: 0 12px 25px rgba(255, 255, 255, 0.25);
+
+  --shadow-large-modal: 10px 10px 20px rgba(255, 255, 255, 0.25);
+
+  --border: 2px solid rgba(255,255,255,0.25);
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body,
-button,
-input,
-textarea {
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-body {
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1,
-h2,
-h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
 }
 
 ul {
@@ -91,39 +91,27 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .section {
+  background: var(--primary-bg-color);
   padding: 6rem 0 2rem;
 }
 
 .section-title {
+  text-align: center;
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color:var(--primary-text-color);
 }
 
 .section-subtitle {
   display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 4rem;
-}
-
-.section-title,
-.section-subtitle {
   text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 4rem;
+  color:var(--primary-text-color);
 }
 
 .container {
-  max-width: 968px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,68 +121,52 @@ img {
   gap: 1.5rem;
 }
 
-.button {
-  display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
+.button{
+  display: inline-flex;            
+  align-items: center;             
+  justify-content: center; 
+  border-radius:var(--border-radius-large);
+  border: 1px solid var(--primary-color);
+  background: var(--primary-bg-color);
+  color:var(--primary-text-color);
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-bold);
+  padding: var(--space-1) var(--space-2);
+  margin-top: var(--space-2);
+  transition: all 0.3s ease;
+  gap: var(--space-0-5);
+  box-shadow: var(--primary-shadow-small);
 }
 
 .button:hover {
-  background-color: var(--first-color) !important;
+  border: 1px solid var(--primary-bg-color);
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
 }
 
 .button-icon {
-  margin-left: var(--mb-0-5);
+  margin-left: var(--space-0-5);
+  transition: transform 0.3s ease;
 }
 
-.button--flex {
-  display: inline-flex;
-  align-items: center;
+.button:hover .button-icon {
+    transform: translateX(5px);
 }
-
 @media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
-
-  .button {
-    padding: 1rem 1.75rem;
-  }
-
-  .button-icon {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    margin: 0 0 var(--header-height) 0;
-  }
-
-  .section {
-    padding: 2rem 0 4rem;
-  }
-
-  .section-subtitle {
-    margin-bottom: var(--mb-3);
-  }
-}
-
-@media screen and (max-width: 576px) {
-}
-
-@media screen and (max-width: 350px) {
   :root {
-    --big-font-size: 2.25rem;
+    --big-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1rem;
+    --h5-font-size: 0.9rem;
+    --h6-font-size: 0.8rem;
   }
-
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+  .button{
+    font-size: var(--h5-font-size);
+    font-weight: var(--font-bold);
+    padding: var(--space-0-75) var(--space-1-5);
+    margin-top: 0;
   }
 }

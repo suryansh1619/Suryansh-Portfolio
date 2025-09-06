@@ -1,56 +1,65 @@
+.footer{
+    background: var(--primary-bg-color);
+    border-top: var(--border);
+}
 .footer-container{
-    padding:1rem 0 2rem;
+    padding:var(--space-1) 0 var(--space-2);
+    padding-top:var(--space-1);
+    padding-bottom:var(--space-2);
 }
 
 .footer-title{
-    color:var(--first-color)
-}
-
-.footer-title{
+    font-size:var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color:var(--primary-color);
     text-align: center;
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--space-2);
 }
+
 
 .footer-social{
-    grid-template-columns: repeat(6,max-content);
+    grid-template-columns: repeat(8,50px);
     justify-content: center;
-    column-gap: 1.25rem;
+    gap: var(--space-1-5);
 }
 
-.footer-social-icon{
-    font-size: 1.25rem;
-    padding: 0.4rem;
-    border-radius: 0.5rem;
-    display: inline-flex;
-}
-
-.footer-social-icon:hover{
-    background-color: var(--first-color) !important;
-}
 .footer-copy{
     display: block;
-    margin-top: 3rem;
-    color: var(--first-color);
+    margin-top: var(--space-3);
+    color: var(--primary-color);
     text-align:center ;
-    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    font-size: var(--h5-font-size);
 }
+
+.footer-social-icon {
+    color:var(--primary-text-color);
+    font-size: var(--h3--font-size);
+    width: 50px;              
+    height: 50px;             
+    display: flex;            
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-circle);       
+    transition: all 0.3s ease;
+    box-shadow: var(--primary-shadow-small);
+    padding: var(--space-0-75);
+}
+
+.footer-social-icon:hover {
+    color: var(--primary-color) ;
+    transform: translateY(-4px) scale(1.2);
+    box-shadow: var(--primary-shadow-medium);;
+}
+
 
 @media screen and (max-width:992px) {
-    .footer-social-link{
-        padding: 0.25rem;
-        border-radius: 0.25rem;
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width:350px) {
     .footer-social{
-        grid-template-columns: repeat(3,max-content);
+        grid-template-columns: repeat(4,45px);
+        justify-content: center;
     }
-    .footer-title{
-        margin-bottom: var(--mb-1);
-    }
-    .footer-copy{
-        margin-top: 1rem;
+    .footer-social-icon {
+        width: 45px;              
+        height: 45px;  
     }
 }

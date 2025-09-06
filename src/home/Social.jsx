@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from '../contexts/ThemeContext'
+import React, { useContext,useState} from 'react'
 import { DataContext } from '../contexts/DataContext'
 export default function Social() {
     const {state}=useContext(DataContext)
     const homeSocial =state.homeSocial
-    const {darktheme}=useContext(ThemeContext);
+    const [hoveredId, setHoveredId] = useState(null);
+        
+    const handleMouseEnter = (id) => setHoveredId(id);
+    const handleMouseLeave = () => setHoveredId(null);
     return (
         <div className='home-social'>
             {homeSocial.map((social,index)=>{
@@ -12,14 +14,12 @@ export default function Social() {
                     <a 
                         key={index}
                         href={social.link}     
-                        className='home-social-icon' 
-                        style={{
-                            color: darktheme ? "var(--container-color)" : "var(--title-color)",
-                            backgroundColor:darktheme ? "var(--title-color)": "var(--container-color)"
-                        }}
+                        className='home-social-icon'
+                        onMouseEnter={() => handleMouseEnter(index)} 
+                        onMouseLeave={handleMouseLeave}
                         target="_blank"
-                        rel="noreferrer">
-                        <i className={`uil uil-${social.name}`}></i>
+                        rel="noopener noreferrer">
+                        {social.icon(index===hoveredId ? "var(--primary-color)": "var(--primary-text-color)")}
                     </a>
                 )
             })}
