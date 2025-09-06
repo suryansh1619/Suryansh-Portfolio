@@ -1,7 +1,7 @@
 # Portfolio Website – React + Vite  
 
 This project is a **fully responsive and customizable portfolio website** built with **React and Vite**, featuring dynamic content from a static JS file. It utilizes **React Reducer for state management** and **Material UI for modern UI components**.  
-🚀 **Live Demo:** [Portfolio](https://portfolio-main-smoky-alpha.vercel.app/)
+🚀 **Live Demo:** [Portfolio](https://suryanshsahu.vercel.app/)
 
 ## 🌟 Features  
 - **Dynamic Content Management** – Fetches project data from a JSON file.  
