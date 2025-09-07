@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react'
 import "./header.css"
-import useToggle from '../hooks/usetoggle'
 import { Link, useLocation } from 'react-router-dom'
 import { ThemeContext } from '../contexts/ThemeContext'
 import { DataContext } from '../contexts/DataContext'
 import Sun from '../SVG/Sun';
 import Moon from '../SVG/Moon';
+import Home from '../SVG/Home';
+import About from '../SVG/About';
+import Project from '../SVG/Project';
 
 export default function Header() {
     const { state } = useContext(DataContext)
@@ -31,22 +33,24 @@ export default function Header() {
                 <div className="nav-menu show-menu" >
                     <ul className="nav-list grid">
                         {[
-                            { to: "/", label: "Home", icon: "uil uil-estate" },
-                            { to: "/about", label: "About", icon: "uil uil-user" },
-                            { to: "/projects", label: "Projects", icon: "uil uil-scenery" }
+                            { to: "/", label: "Home", icon: (color)=><Home color={color}/> },
+                            { to: "/about", label: "About", icon: (color)=><About color={color}/> },
+                            { to: "/projects", label: "Projects", icon: (color)=><Project color={color}/> }
                         ].map(({ to, label, icon }) => (
                             <li key={to} className="nav-item">
                                 <Link 
                                     to={to}
                                     className={`${location.pathname === to ? "active-link" : ""} nav-link`}>
-                                    <i className={`${icon} nav-icon`}></i>
-                                    {!isMobile && <span className="nav-text">{label}</span>}
+                                    <div className='nav-icon'>
+                                        {icon(`${location.pathname === to ? "var(--primary-color)" : "var(--primary-text-color)"}`)}
+                                    </div>
+                                    {!isMobile && <span className={`${location.pathname === to ? "nav-text-active" : ""} nav-text`}>{label}</span>}
                                 </Link>
                             </li>
                         ))}
                         <li className="nav-item">
                             <div 
-                                className='nav-theme'
+                                className='nav-icon nav-theme'
                                 onClick={changetheme}
                                 onMouseEnter={()=>setHovered(true)} 
                                 onMouseLeave={()=>setHovered(false)}>
