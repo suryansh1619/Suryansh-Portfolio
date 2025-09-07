@@ -55,7 +55,7 @@
 .project-hover {
   position: absolute;
   inset: 0;
-  backdrop-filter: var(--blur-light);
+  backdrop-filter: var(--blur-medium);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -86,13 +86,15 @@
 }
 
 .tech-chip {
+  border-radius:var(--border-radius-large);
+  border: 1px solid var(--primary-color);
   color:var(--primary-text-color);
-  background: var(--primary-color);
+  background: var(--primary-bg-color);
   font-size: var(--h6-font-size);
   padding: var(--space-0-5) var(--space-1);
-  border-radius: var(--border-radius-large);
   margin: var(--space-0-25);
   display: inline-block;
+  box-shadow: var(--shadow-small);
 }
 
 .project-modal-pagination {
