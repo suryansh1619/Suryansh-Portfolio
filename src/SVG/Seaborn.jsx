@@ -1,6 +1,6 @@
 export default function Seaborn({color}){
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Seaborn-Icon--Streamline-Svg-Logos" height="50" width="50">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Seaborn-Icon--Streamline-Svg-Logos">
     <desc>
       Seaborn Icon Streamline Icon: https://streamlinehq.com
     </desc>

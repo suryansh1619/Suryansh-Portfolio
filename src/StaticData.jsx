@@ -28,6 +28,7 @@ import Streamlit from './SVG/Streamlit';
 import Postman from './SVG/Postman';
 import Docker from './SVG/Docker';
 import VSCode from './SVG/Vscode';
+import Mail from './SVG/Mail'
 
 import Instagram from './SVG/Instagram';
 import Twitter from './SVG/Twitter';
@@ -102,7 +103,7 @@ const StaticData = {
         },
         {
             name: "envelope",
-            icon: (color)=><Git color={color}/>,
+            icon: (color)=><Mail color={color}/>,
             link: "mailto:suryanshsahu289@gmail.com"
         },
         {
